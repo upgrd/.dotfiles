@@ -156,3 +156,4 @@ let g:ale_xml_xmllint_options="--dtdvalid --relaxng --schema"
 command! -nargs=1 Xpath w !xmllint --xpath "<args>" %
 
 
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "mycoolUltisnippets"]
