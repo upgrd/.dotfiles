@@ -4,6 +4,8 @@
 "{{{
 " set colorscheme
 colorscheme mac_classic
+" enable HTML snippets
+UltiSnipsAddFiletypes xml.html.css
 "}}}
 
 """ mappings
