@@ -120,17 +120,13 @@ bindsym $mod+b exec google-chrome
 
 ### my settings
 # second monitor always on ws 9
-workspace 9 output HDMI-1
-# handle feh bg (not with xsession anymore!)
-#exec_always feh --bg-ma ~/Pictures/borg_cube.jpg
-# always flux
-exec_always fluxgui
+workspace 9 output DP2
 # workspace default == stack mode
 workspace_layout stacking
 # exec xrandr
-exec_always --no-startup-id xrandr --output HDMI-1 --above eDP-1
+exec_always --no-startup-id xrandr --output DP2 --mode 2560x1440 --above LVDS1 
 # exec redshift
-exec --no-startup-id redshift-gtk
+#exec --no-startup-id redshift-gtk
 # exec feh background
 exec feh --bg-center ~/.config/i3/backgrounds/over9000.jpg
 # run touchpad suspend
