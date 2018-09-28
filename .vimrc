@@ -1,4 +1,5 @@
 """ UPGRD vimrc
+
 " KEEP .vimrc clean! -->  http://vim.wikia.com/wiki/Keep_your_vimrc_file_clean
 
 """ VUNDLE section
@@ -68,6 +69,11 @@ Plugin 'w0rp/ale'
 " Disable automatic comment insertion
 " See http://vim.wikia.com/wiki/Disable_automatic_comment_insertion 
 
+" highlight settings
+"
+set hlsearch incsearch
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 """ Simultanious hybrid numbers
 set number
