@@ -1,0 +1,5 @@
+### XMODMAP ###
+
+# disable XF86Forward and X86Back
+keycode 166=
+keycode 167=
