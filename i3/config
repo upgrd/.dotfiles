@@ -119,18 +119,16 @@ bindsym $mod+Shift+e exit
 bindsym $mod+b exec google-chrome
 
 ### my settings
+# exec xrandr
+exec_always --no-startup-id xrandr --output DP2 --mode 2560x1440 --above LVDS1 
+# exec feh background
+exec_always --no-startup-id feh --bg-center ~/.config/i3/backgrounds/over9000.jpg
 # second monitor always on ws 9
 workspace 9 output DP2
 # workspace default == stack mode
 workspace_layout stacking
-# exec xrandr
-exec_always --no-startup-id xrandr --output DP2 --mode 2560x1440 --above LVDS1 
-# exec redshift
-#exec --no-startup-id redshift-gtk
-# exec feh background
-exec feh --bg-center ~/.config/i3/backgrounds/over9000.jpg
 # run touchpad suspend
-exec syndaemon -i 0.5 -K -d 
+#exec syndaemon -i 0.5 -K -d 
 # 
 
 ## resize windows
