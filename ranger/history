@@ -1,4 +1,9 @@
 fzf_select
 search mdf
 search md
+search 
+search .dot
+mkdir vo
+rmdir
+delete
 x
