@@ -1,8 +1,16 @@
 ### my cool XML snippets
 
+# "t" and "ti" available
 extends xml
 
-snippet test "test visual"
-this is a test, ${VISUAL}!
+# namespace element snippet
+snippet nst "XML namespace element snippet" a
+<$1 xmlns:${2:prefix}="${3:uri}">
+    $4
+</$1> 
 endsnippet
 
+# namespace attribute snippet
+snippet "(xml)?ns" "XML namespace attribute snippet" ar
+xmlns:${1:prefix}="${2:uri}" 
+endsnippet
