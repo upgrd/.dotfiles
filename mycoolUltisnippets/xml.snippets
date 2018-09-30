@@ -14,3 +14,13 @@ endsnippet
 snippet "(xml)?ns" "XML namespace attribute snippet" ar
 xmlns:${1:prefix}="${2:uri}" 
 endsnippet
+
+# xsl stylesheet declaration
+snippet "t(rans)?f(orm)?" "XSL stylesheet declaration snippet" ar
+<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+endsnippet
+
+# xsl stylesheet reference
+snippet "s(tyle)?s(sheet)?" "XSL stylesheet reference snippet" ar
+<?xml-stylesheet type="${1:text/xsl}" href="$2"?>
+endsnippet
