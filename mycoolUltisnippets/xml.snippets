@@ -3,6 +3,16 @@
 # "t" and "ti" available
 extends xml
 
+# advanced inline tag
+#snippet ti "Inline tag" b
+#<${1:tag}>${2:${VISUAL}}</${1/([\w:._-]+).*/$1/}>
+#endsnippet
+
+snippet xml "XML declaration" b
+<?xml version="1.0" encoding="UTF-8" ?>
+$1
+endsnippet
+
 # namespace element snippet
 snippet nst "XML namespace element snippet" a
 <$1 xmlns:${2:prefix}="${3:uri}">
@@ -25,4 +35,8 @@ endsnippet
 # xsl stylesheet reference
 snippet "s(tyle)?s(sheet)?" "XSL stylesheet reference snippet" ar
 <?xml-stylesheet type="${1:text/xsl}" href="$2"?>
+endsnippet
+
+snippet "d(oc)?t(ype)?" "external DTD reference" ar
+<!DOCTYPE ${1:root} SYSTEM "${2:file}">
 endsnippet
