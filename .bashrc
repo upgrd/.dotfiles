@@ -126,7 +126,7 @@ alias vifm='vifm .'
 alias open='xdg-open'
 alias ls='ls -a --color'
 alias qutebrowser='qutebrowser --enable-webengine-inspector'
-alias plan='vim ~/DH/allg/dh_plan.txt'
+alias plan='vim ~/DH/allg/dh_plan.md'
 # set compose key
 #setxkbmap -option compose:ralt 
 #setxkbmap -option "caps:swapescape"
@@ -141,3 +141,6 @@ export VISUAL=vim
 export FZF_DEFAULT_COMMAND="find -L"
 export FZF_CTRL_T_COMMAND="find -L"
 
+### bash settings
+# bash autcd
+shopt -s autocd
