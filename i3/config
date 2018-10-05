@@ -147,3 +147,16 @@ bindsym $mod+u move down 30
 bindsym $mod+i move up 30
 bindsym $mod+o move right 30
 
+### DROPDOWN ###
+# Luke Smith's solution see https://www.youtube.com/watch?v=q-l7DnDbiiU
+
+## dropdown calc
+# dropdown settings
+for_window [instance="dropdown_calc"] floating enable
+for_window [instance="dropdown_calc"] resize 625 400
+for_window [instance="dropdown_calc"] move scratchpad
+# create terminal instance with name and python running
+exec_always --no-startup-id rxvt -name dropdown_calc -e python3
+# binding for calc
+bindsym $mod+c [instance="dropdown_calc"] scratchpad show; [instance="dropdown_calc"] move position center
+
