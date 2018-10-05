@@ -6,7 +6,17 @@ search .dot
 mkdir vo
 rmdir
 rename dconfnh
-search dh
 delete
-x
 search .vim
+sear
+cd ~
+search jo
+search vim
+search xml
+search dh
+mkdir vu_py
+rename
+rename vu_PY
+search joo
+search jott
+x
