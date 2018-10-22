@@ -18,9 +18,9 @@ set expandtab
 """ mappings
 "{{{
 " map F9 to validate
-nnoremap <F9> :w !xmllint --valid % --noout<cr>
+"nnoremap <F9> :w !xmllint --valid % --noout<cr>
 " Xpath prompt
-nnoremap <F8> :call XpathQuery()<cr>
+nnoremap <F9> :call XpathQuery()<cr>
 function! XpathQuery()
   " boilerplate ; get input
   call inputsave()
@@ -30,4 +30,7 @@ function! XpathQuery()
   execute ':w !saxon-lint.pl --xpath ' . "\"" . xpathExpression . "\" " . @%
 
 endfunction
-"}}}
+
+" XSLT transform to stout or output file
+nnoremap <F10> :w !java -jar /usr/local/bin/saxon9he.jar -s:% -a<CR>
+nnoremap <F10><F10> :w !java -jar /usr/local/bin/saxon9he.jar -s:% -o:
