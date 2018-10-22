@@ -8,6 +8,21 @@ extends xml
 #<${1:tag}>${2:${VISUAL}}</${1/([\w:._-]+).*/$1/}>
 #endsnippet
 
+
+# tag with attribute snippet
+snippet ta "tag with attribute" 
+<${1:tag} ${2:attr}="${3:value}">
+    ${4:${VISUAL}}
+</${1/([\w:._-]+).*/$1/}>
+endsnippet
+
+# inline tag with attribute snippet
+snippet tia "inline tag with attribute" 
+<${1:tag} ${2:attr}="${3:value}">${4:${VISUAL}}</${1/([\w:._-]+).*/$1/}>
+endsnippet
+
+
+#
 snippet xml "XML declaration" b
 <?xml version="1.0" encoding="UTF-8" ?>
 $1
@@ -39,4 +54,34 @@ endsnippet
 
 snippet "d(oc)?t(ype)?" "external DTD reference" ar
 <!DOCTYPE ${1:root} SYSTEM "${2:file}">
+endsnippet
+
+# TEI minimal
+snippet teimini "TEI minimal structure" a
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>
+          ${1:<!--Title-->}
+        </title>
+      </titleStmt>
+      <publicationStmt>
+        <p>
+          ${2:<!--Publication Information-->}
+        </p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>
+          ${3:<!--Information about the source-->}
+        </p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      ${4:<!--Some structural division, paragraph, line group, speech, ...-->}
+    </body>
+  </text>
+</TEI>
 endsnippet
