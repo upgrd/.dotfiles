@@ -27,7 +27,7 @@ function! XpathQuery()
   let xpathExpression = input('Enter xpath expression: ')
   call inputrestore()
   " command to pass xpathExpression
-  execute ':w !xmllint % --xpath ' . "\"" . xpathExpression . "\""
+  execute ':w !saxon-lint.pl --xpath ' . "\"" . xpathExpression . "\" " . @%
 
 endfunction
 "}}}
