@@ -141,6 +141,9 @@ export VISUAL=vim
 export FZF_DEFAULT_COMMAND="find -L"
 export FZF_CTRL_T_COMMAND="find -L"
 
+# add saxon-lint to path
+export PATH="$PATH:/usr/local/bin/saxon-lint"
+
 ### bash settings
 # bash autcd
 shopt -s autocd
