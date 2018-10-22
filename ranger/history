@@ -1,12 +1,10 @@
 fzf_select
 search mdf
 search md
-search 
 search .dot
 mkdir vo
 rmdir
 rename dconfnh
-delete
 search .vim
 sear
 cd ~
@@ -17,6 +15,17 @@ search dh
 mkdir vu_py
 rename
 rename vu_PY
+search pdf
+search baust
+search vorwort
+search 
+search jotting
+cd  ~
+rename Sweigart-Automate_the_boring_stuff_Python-2015
+delete
+l
+
+w
+x
 search joo
 search jott
-x
