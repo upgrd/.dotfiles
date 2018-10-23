@@ -24,13 +24,13 @@ nnoremap <F9> :call XpathQuery()<cr>
 function! XpathQuery()
   " boilerplate ; get input
   call inputsave()
-  let xpathExpression = input('Enter xpath expression: ')
+  let xpathExpression = input('Xpath expression (use ""): ')
   call inputrestore()
   " command to pass xpathExpression
-  execute ':w !saxon-lint.pl --xpath ' . "\"" . xpathExpression . "\" " . @%
+  execute ':w !saxon-lint.pl --xpath ' . "\'" . xpathExpression . "\' " . @%
 
 endfunction
 
 " XSLT transform to stout or output file
 nnoremap <F10> :w !java -jar /usr/local/bin/saxon9he.jar -s:% -a<CR>
-nnoremap <F10><F10> :w !java -jar /usr/local/bin/saxon9he.jar -s:% -o:
+nnoremap <F10><F10> :w !java -jar /usr/local/bin/saxon9he.jar -s:% -a -o:
