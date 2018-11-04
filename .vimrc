@@ -21,6 +21,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/nerdcommenter'
+"Plugin 'easymotion/vim-easymotion'
+Plugin 'justinmk/vim-sneak'
+Plugin 'matze/vim-move'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,6 +64,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 """ Linting via ALE
 Plugin 'w0rp/ale'
+
 
 """ XML section
 "{{{
@@ -165,3 +170,7 @@ command! -nargs=1 Xpath w !xmllint --xpath "<args>" %
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "mycoolUltisnippets"]
 " turn on omni completion
 set omnifunc=syntaxcomplete#Complete
+
+" activate vim label mode
+let g:sneak#label = 1
+
