@@ -1,31 +1,39 @@
 ### my cool XML snippets
 
+### tag snippets
+# t, ti, ta, tia, (te,) tie, (tae,) tiae
+
 # "t" and "ti" available
 extends xml
 
-# advanced inline tag
-#snippet ti "Inline tag" b
-#<${1:tag}>${2:${VISUAL}}</${1/([\w:._-]+).*/$1/}>
-#endsnippet
-
-
-# tag with attribute snippet
+# ta: tag with attribute
 snippet ta "tag with attribute" 
 <${1:tag} ${2:attr}="${3:value}">
     ${4:${VISUAL}}
 </${1/([\w:._-]+).*/$1/}>
 endsnippet
 
-# inline tag with attribute snippet
+# tia: tag inline with attribute
 snippet tia "inline tag with attribute" 
 <${1:tag} ${2:attr}="${3:value}">${4:${VISUAL}}</${1/([\w:._-]+).*/$1/}>
 endsnippet
 
+# tie: empty inline tag
+snippet tie "empty inline tag" b
+<${1:tag}/>
+endsnippet
+
+# tiae: empty tag with attribute
+snippet tiae "empty inline tag with attribute" b
+<${1:tag} ${2:attr}="${3:value}"/>
+endsnippet
+
+
+
 
 #
 snippet xml "XML declaration" b
-<?xml version="1.0" encoding="UTF-8" ?>
-$1
+<?xml version="1.0" encoding="UTF-8" ?>$1
 endsnippet
 
 # namespace element snippet
