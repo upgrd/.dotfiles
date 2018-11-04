@@ -127,6 +127,7 @@ alias open='xdg-open'
 alias ls='ls -a --color'
 alias qutebrowser='qutebrowser --enable-webengine-inspector'
 alias plan='vim ~/DH/allg/dh_plan.md'
+alias emacs='emacs -nw'
 # set compose key
 #setxkbmap -option compose:ralt 
 #setxkbmap -option "caps:swapescape"
