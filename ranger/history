@@ -8,14 +8,11 @@ rename dconfnh
 search .vim
 sear
 cd ~
-search jo
-search vim
 search xml
 search dh
 mkdir vu_py
 rename
 rename vu_PY
-search pdf
 search baust
 search vorwort
 search 
@@ -23,9 +20,16 @@ search jotting
 cd  ~
 rename Sweigart-Automate_the_boring_stuff_Python-2015
 delete
-l
 
 w
-x
 search joo
+linemode 
+search cook
+search pdf
+search rhees
+l
+x
+search vim
+rename __%f
+search jo
 search jott
