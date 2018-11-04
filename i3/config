@@ -124,6 +124,8 @@ bindsym $mod+b exec google-chrome
 exec_always --no-startup-id " sleep 2 ; xrandr --output DP2 --mode 2560x1440 --above LVDS1 "
 # exec feh background
 exec_always --no-startup-id " sleep 2 ; feh --bg-center ~/.config/i3/backgrounds/over9000.jpg "
+# redshift on xsession start
+exec_always --no-startup-id redshift
 
 # second monitor always on ws 9
 workspace 9 output DP2
