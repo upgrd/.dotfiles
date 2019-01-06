@@ -25,6 +25,8 @@ Plugin 'scrooloose/nerdcommenter'
 "Plugin 'easymotion/vim-easymotion'
 Plugin 'justinmk/vim-sneak'
 Plugin 'matze/vim-move'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -129,14 +131,15 @@ set foldlevel=0
 """ MAPPINGS
 "{{{
 " ctrl-c/v to copy/yank
-vnoremap <C-c> "+yy
-noremap <C-v> "+p
+"vnoremap <C-c> "+yy
+"noremap <C-v> "+p
 nnoremap <F10> :NERDTreeToggle<CR>
 nnoremap <F11> :TagbarToggle<CR>
 " ale mappings
 nnoremap <C-j> :ALENext<cr>
 nnoremap <C-k> :ALEPrevious<cr>
 nnoremap <cr> o<esc>
+" Syntax inspector from http://vimcasts.org/episodes/creating-colorschemes-for-vim/
 " Show syntax highlighting groups for word under cursor
 noremap <C-S-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
@@ -173,4 +176,26 @@ set omnifunc=syntaxcomplete#Complete
 
 " activate vim label mode
 let g:sneak#label = 1
+
+
+
+" Change the color scheme from a list of color scheme names.
+" Version 2010-09-12 from http://vim.wikia.com/wiki/VimTip341
+" Press key:
+"   F8                next scheme
+"   Shift-F8          previous scheme
+"   Alt-F8            random scheme
+" Set the list of color schemes used by the above (default is 'all'):
+"   :SetColors all              (all $VIMRUNTIME/colors/*.vim)
+"   :SetColors my               (names built into script)
+"   :SetColors blue slate ron   (these schemes)
+"   :SetColors                  (display current scheme names)
+" Set the current color scheme based on time of day:
+"   :SetColors now
+if v:version < 700 || exists('loaded_setcolors') || &cp
+  finish
+endif
+
+let loaded_setcolors = 1
+let s:mycolors = ['slate', 'torte', 'darkblue', 'delek', 'murphy', 'elflord', 'pablo', 'koehler']  " colorscheme names that we use to set color
 
