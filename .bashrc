@@ -128,6 +128,9 @@ alias ls='ls -a --color'
 alias qutebrowser='qutebrowser --enable-webengine-inspector'
 alias plan='vim ~/DH/allg/dh_plan.md'
 alias emacs='emacs -nw'
+alias v='vim'
+alias e='emacs'
+
 # set compose key
 #setxkbmap -option compose:ralt 
 #setxkbmap -option "caps:swapescape"
@@ -148,3 +151,9 @@ export PATH="$PATH:/usr/local/bin/saxon-lint"
 ### bash settings
 # bash autcd
 shopt -s autocd
+
+
+#
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+    pgrep i3 || startx
+fi
