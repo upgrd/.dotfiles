@@ -1,35 +1,50 @@
-fzf_select
-search mdf
-search md
-search .dot
-mkdir vo
-rmdir
-rename dconfnh
-search .vim
-sear
-cd ~
-search xml
-search dh
 mkdir vu_py
 rename
 rename vu_PY
 search baust
 search vorwort
-search 
 search jotting
 cd  ~
 rename Sweigart-Automate_the_boring_stuff_Python-2015
-delete
-
-w
 search joo
 linemode 
 search cook
-search pdf
 search rhees
 l
-x
 search vim
 rename __%f
 search jo
+qq
+cd !
+cd ~
 search jott
+rename aufgabe2_plank.py
+wq
+w
+rename chrome_bookmarks
+cd 
+cd  
+mkdir abbildungen
+search pdf
+search kenny
+search 
+touch index.txt
+search land
+search list
+search Lisp
+search g_
+search Lis
+search DH
+touch testmodule.py
+cd  c
+delete
+
+q!|
+rename versuch_2.2
+open_with 
+rename 
+rename #FULL_1+2.odt
+rename new_2.2.odt
+search Doc
+x
+q!
