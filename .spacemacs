@@ -35,30 +35,32 @@ values."
      auto-completion
      ranger
      themes-megapack
+     javascript
+     html
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
-     ;; auto-completion
+     auto-completion
      ;; better-defaults
      emacs-lisp
      ;; git
-     ;; markdown
-     ;; org
+     markdown
+     org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
+     spell-checking
+     syntax-checking
      ;; version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(dmenu yasnippet-snippets)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -114,7 +116,7 @@ values."
    ;; directory. A string value must be a path to an image format supported
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed. (default 'official)
-   dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-banner 'official 
    ;; List of items to show in startup buffer or an association list of
    ;; the form `(list-type . list-size)`. If nil then it is disabled.
    ;; Possible values for list-type are:
@@ -126,6 +128,20 @@ values."
    ;; True if the home buffer should respond to resize events.
    dotspacemacs-startup-buffer-responsive t
    ;; Default major mode of the scratch buffer (default `text-mode')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    dotspacemacs-scratch-mode 'text-mode
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
@@ -314,7 +330,13 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
-  ;; my configurations
+  ;; ### my configurations ###
+
+  ;; add sys clipboard to kill-ring
+  (setq save-interprogram-paste-before-kill t)
+
+  ;; always use helm follow
+  (spaceline-toggle-helm-follow-on)
 
   ;; Wrapper for calling external shell command on current buffer (like vim's % register)
   (defun extsh-cmd-wrapper (cmd)
@@ -328,8 +350,16 @@ you should place your code here."
 
   ;; nxml-mode key bindung to run saxon on current buffer 
   (evil-define-key 'normal nxml-mode-map (kbd "<f9>") (lambda () (interactive) (extsh-cmd-wrapper "java -jar /usr/local/bin/saxon9he.jar -s:%s -a")))
-  ;; nxml-mode key bindung to prompt for Xpath expression (via saxon-lint)
-  (evil-define-key 'normal nxml-mode-map (kbd "<f10>") (lambda () (interactive "sXPath expression: ") (extsh-cmd-wrapper "saxon-lint.pl --xpath %s")))
+
+  ;; Interactive Xpath query on current buffer
+  (defun ext-xpath-call (query)
+       (interactive "sXpath expression: ")
+       (shell-command (format "saxon-lint.pl --xpath \'%s\' %s" query buffer-file-name)))
+
+  ;; nxml-mode key binding to run xpath query on current buffer
+
+
+  ;; ### / ###
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
