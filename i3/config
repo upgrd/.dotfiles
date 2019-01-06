@@ -123,7 +123,7 @@ bindsym $mod+b exec google-chrome
 # exec xrandr
 exec_always --no-startup-id " sleep 2 ; xrandr --output DP2 --mode 2560x1440 --above LVDS1 "
 # exec feh background
-exec_always --no-startup-id " sleep 2 ; feh --bg-center ~/.config/i3/backgrounds/over9000.jpg "
+exec_always --no-startup-id " sleep 2 ; feh --bg-scale ~/.config/i3/backgrounds/nx01.jpg"
 # redshift on xsession start
 exec_always --no-startup-id redshift
 
