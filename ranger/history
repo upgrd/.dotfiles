@@ -1,15 +1,3 @@
-mkdir vu_py
-rename
-rename vu_PY
-search baust
-search vorwort
-search jotting
-cd  ~
-rename Sweigart-Automate_the_boring_stuff_Python-2015
-search joo
-linemode 
-search cook
-search rhees
 l
 search vim
 rename __%f
@@ -21,8 +9,6 @@ search jott
 rename aufgabe2_plank.py
 wq
 w
-rename chrome_bookmarks
-cd 
 cd  
 mkdir abbildungen
 search pdf
@@ -37,14 +23,28 @@ search Lis
 search DH
 touch testmodule.py
 cd  c
-delete
-
 q!|
 rename versuch_2.2
-open_with 
 rename 
 rename #FULL_1+2.odt
 rename new_2.2.odt
 search Doc
-x
 q!
+rename skizze.odt
+
+search dop
+search dip
+cd 
+rename 3.xjj
+rename back2_FULL_1+2.odt
+rename #%f
+q1
+rename chrome_bookmarks
+x
+cd :
+mkdir 2.2_Schluss
+delete
+rename uebersicht_schluss_2.2
+open_with 
+rename %f.odt
+search muff
