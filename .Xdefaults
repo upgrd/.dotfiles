@@ -1,7 +1,7 @@
 
 ! cursor
 URxvt.cursorBlink: false
-!URxvt.cursorUnderline: true
+URxvt.cursorUnderline: false
 URxvt.cursorColor: magenta
 
 URxvt.saveLines: 1000
